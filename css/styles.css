@@ -1,0 +1,290 @@
+/* START OF THE CSS STYLES */
+
+
+/*/////////////////////////////*/
+
+
+/* HTML TAGS */
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #404040;
+	background-color: #FFFFFF;
+}
+
+h1,
+h2 {
+	font-family: arial, sans-serif;
+	text-transform: uppercase;
+	margin: auto;
+	text-align: center;
+	cursor:default;
+}
+
+td {
+	padding: 0.2em;
+}
+
+hr {
+	color: #000000;
+	border: 0;
+	height: 0;
+}
+
+input {
+	display: block;
+	width: 60%;
+	margin-bottom: 1em;
+	padding: 0.5em;
+	font-family: arial, sans-serif;
+}
+
+input[type=date], input[type=time], input[type=text] {
+	width: 100%;
+}
+
+textarea {
+	font-family: arial, sans-serif;
+	padding: 0.5em;
+	width: 100%;
+	height: 400px;
+	min-width: 28em;
+	max-height: 10em;
+	max-width: 28em;
+}
+
+input[type=submit], .submit {
+	cursor: pointer;
+	border: none;
+	color: white;
+	padding: 5px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 100%;
+}
+
+label {
+	color: #404040;
+	text-shadow: 1px 1px white;
+	font-weight: bold;
+	font-size: 85%;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+li {
+	width: 100%;
+	position: relative;
+}
+
+
+/*/////////////////////////////*/
+
+
+/* HTML CLASSES */
+
+
+/* The main H1 header */
+
+.titleHeader {
+	text-align: left;
+	margin-left: 2em;
+}
+
+.legend {
+	font-weight: bold;
+	display: block;
+	padding-left: 1em;
+	margin-bottom: 0.5em;
+}
+
+/* Navigator Link Styles */
+
+.naviUL {
+	list-style-type: none;
+	margin: 2em;
+	padding: 0;
+	min-width: 28em;
+}
+
+.naviLI,
+.naviActiveAdd,
+.naviActiveView {
+	display: inline;
+	padding-right: 0.5em;
+}
+
+.naviLI a {
+	padding: 8px;
+	background-color: #dddddd;
+	border: 1px solid #555;
+	color: blue;
+	text-decoration: none;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.radiobutton {
+	display: inline-block;
+    margin: auto;
+    width: 45%;
+	margin: 0.3em;
+	padding: 0.2em;
+	border: 1px dashed #666666;
+	text-align: center;
+}
+
+.border {
+	border: 2px dotted #ABABAB;
+}
+
+/* Common styles for all three navi links when they are active */
+
+.naviActiveAdd a,
+.naviActiveView a {
+	padding: 8px;
+	border: 1px solid #555;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	box-shadow: 5px 5px 3px #888888;
+}
+
+
+/* Individual colors for different navi links */
+
+.naviActiveAdd a, .naviActiveView a {
+	background-color: #C6CEDD;
+	color: #404040;
+}
+
+
+/* When mouse is over currently active navi link */
+
+.naviActiveAdd a:hover,
+.naviActiveView a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+.naviLI a:hover {
+	background-color: #000000;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+/* Hides & Shows block */
+
+.hideBlock {
+	display: none;
+}
+
+.showBlock {
+	display: block;
+}
+
+.viewContent {
+    vertical-align: top;
+	//border: 1px solid #555;
+}
+
+.viewSearch, .viewMap {
+	display: inline-block;
+	//border: 1px solid #555;
+}
+
+.viewSearch {
+	width: 20%;
+    vertical-align: top;
+	margin-right: 2em;
+}
+
+.viewMap {
+	height: 560px;
+	width: 75%;
+}
+
+.submit {
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #A9B0BC;
+	box-shadow: 5px 5px 2px #888888;
+	border: 1px solid black;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	width: 100%;
+}
+
+.margin {
+	margin: 5em;
+}
+
+
+/*/////////////////////////////*/
+
+
+/* HTML IDENTIFIERS */
+
+
+/* #addPage, #viewPage are DIV elements of the 'New event', 'View calendar' boxes */
+
+#addPage, #viewPage {
+	border: 1px solid #A9B0BC;
+	margin: 2em;
+	padding: 1em;
+	min-width: 30em;
+	max-width: 30em;
+	box-shadow: 10px 10px 5px #888888;
+	background-color: #C6CEDD;
+}
+
+#viewPage {
+	min-width: 60%;
+	max-width: 60%;
+}
+
+/*/////////////////////////////*/
+
+/* AUTO COMPLETE */
+
+      #locationField, #controls {
+        position: relative;
+        width: 28em;
+		padding-bottom: 3em;
+      }
+      #autocomplete {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 99%;
+      }
+      #address {
+        width: 28em;
+        padding-right: 2px;
+      }
+      .field {
+        width: 99%;
+      }
+      .slimField {
+        width: 80px;
+      }
+      .wideField {
+        width: 200px;
+      }
+      #locationField {
+        height: 20px;
+        margin-bottom: 2px;
+      }
+
+
+/* END OF THE CSS STYLES */

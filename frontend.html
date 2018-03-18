@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Title</title>
+	<!-- EXTERNAL SOURCES -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+	<h1 class="titleHeader hideBlock">TitleHeader</h1>
+	<!-- NAVIGATION LINKS -->
+	<nav>
+		<ul class="naviUL">
+			<li class="naviActiveAdd" id="liAdd"><a href="#add">UUSI</a></li>
+			<li class="naviLI" id="liView"><a href="#view">ETSI</a></li>
+		</ul>
+	</nav>
+	<main>
+		<!-- ADD EVENT PAGE -->
+		<div id="addPage">
+			<h2 class="hideBlock">New</h2>
+			<!-- ADD EVENT FORM -->
+			<form id="addForm" onsubmit="formToJSON();return false"">
+				<fieldset>
+					<fieldset>
+						<div class="border">
+							<div class="radiobutton"><input class="inline" type="radio" name="action" onchange="radiobuttonAction()" id="rbAdd" value="add" checked>Lisää</div>
+							<div class="radiobutton"><input class="inline" type="radio" name="action" onchange="radiobuttonAction()" id="rbUpdate" value="update">Päivitä</div>
+							<div class="radiobutton"><input class="inline" type="radio" name="action" onchange="radiobuttonAction()" id="rbDelete" value="delete">Poista</div>
+						</div>
+						<span class="legend"><div id="legendName">Nimi</div></span>
+						<div class="hideBlock"><label id="action"></label></div>
+						<div id="firstnameinput"><label>Etunimi:</label>
+						<input type="text" id="firstname" pattern="[A-Za-zÄÖäö]{1,32}" placeholder="Esim. Matti"></div>
+						<label><div id="identifier">Sukunimi:</div></label>
+						<input id="idnumber" class="hideBlock" type="text" id="id" pattern="[0-9]{1,32}" placeholder="Esimm. 12345">
+						<input type="text" id="lastname" pattern="[A-Za-zÄÖäö]{1,32}" placeholder="Esim. Meik&auml;l&auml;inen">
+					</fieldset>
+					<hr>
+					<fieldset>
+						<span class="legend">Osoite:</span>
+						<div id="locationField">
+							<input id="autocomplete" placeholder="Sy&ouml;t&auml; osoite..." onFocus="geolocate()" type="text"></input>
+						</div>
+					<table id="address">
+						<tr>
+							<td class="wideField" colspan="2"><label>Katuosoite</label></td>
+						</tr>
+						<tr>
+							<td class="wideField"><input class="field" id="route"
+								disabled="true"></input></td>
+							<td class="slimField"><input class="field" id="street_number"
+								disabled="true"></input></td>
+						</tr>
+						<tr>
+							<td class="wideField"><label>Kaupunki</label></td>
+							<td class="slimField"><label>Postinumero</label></td>
+						</tr>
+						<tr>
+							<td class="wideField"><input class="field" id="locality"
+								disabled="true"></input></td>
+							<td class="slimField"><input class="field" id="postal_code"
+								disabled="true"></input></td>
+						</tr>	
+						<tr>
+							<td class="wideField" colspan="2"><label>Maa</label></td>
+						</tr>
+						<tr>
+							<td class="wideField" colspan="2"><input class="field"
+								id="country" disabled="true"></input></td>
+						</tr>
+						<tr>
+							<td class="wideField hideBlock" colspan="2"><input class="field" 
+								id="administrative_area_level_1" disabled="true"></input></td>
+						</tr>
+					</table>
+					</fieldset>
+					<!-- SUBMIT -->
+					</br></br>
+					<div><input class="submit" type="submit" value="L&auml;het&auml;"></div>
+					<span class="submit hideBlock" onclick="submit()">L&auml;het&auml;</span>
+				</fieldset>
+			</form>
+		</div>
+		<!-- VIEW EVENT PAGE -->
+		<div id="viewPage">
+			<h2 class="hideBlock">View</h2>
+			<div class="viewContent">
+				<div class="viewSearch">
+					<form id="searchForm">
+						<input type="text" id="search" name="search" placeholder="Nimi tai postinumero">
+						<div class="hideBlock"><input class="submit" type="submit" value="Etsi" id="submitSearch" placeholder=""></div>
+						<span class="submit" onclick="search()">Etsi</span>
+					</form>
+					<div id="searchphrase"></div>
+				</div>
+				<div class="viewMap" id="map">Map</div>
+			</div>
+		</div>
+	</main>
+
+	<div class="margin" id="respond"></div>
+
+<script src="js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh9EHRGu6kzPZ_N87jfimr9XYgjuPrr_U&libraries=places"
+        async defer></script>
+</body>
+</html>
